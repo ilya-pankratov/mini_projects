@@ -1,9 +1,9 @@
 from random import choice
 
-DIGITS = '0123456789'
-LOWERCASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
-UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-PUNCTUATION = '!#$%&*+-=?@^_'
+digits = '0123456789'
+lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
+uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+punctuation = '!#$%&*+-=?@^_'
 
 
 def generate_password(length, character_set, count):        # генерируем пароли и предлагаем начать заново
@@ -50,25 +50,25 @@ def collect_characters():       # определяем параметры для
 
     digits_on = is_valid_answer(input('Включать ли цифры? (+/-): '))
     if digits_on:
-        chars += DIGITS
+        chars += digits
         flag = True
         something_is = True
 
     capital_letters_on = is_valid_answer(input('Включать ли прописные буквы? (+/-): '))
     if capital_letters_on:
-        chars += UPPERCASE_LETTERS
+        chars += uppercase_letters
         flag = True
         something_is = True
 
     lower_case_on = is_valid_answer(input('Включать ли строчные буквы? (+/-): '))
     if lower_case_on:
-        chars += LOWERCASE_LETTERS
+        chars += lowercase_letters
         flag = True
         something_is = True
 
     symbols_on = is_valid_answer(input('Включать ли символы "!#$%&*+-=?@^_"? (+/-): '))
     if symbols_on:
-        chars += PUNCTUATION
+        chars += punctuation
         flag = True
 
     if not flag:
